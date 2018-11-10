@@ -42,7 +42,7 @@ public class UserController {
     public String checkName(String username){
         Optional<UserEntity> userEntity = userService.findByName(username);
         if(userEntity.isPresent()){
-            return "用户名已存在";
+            return "username exits";
         }
         return null;
     }
